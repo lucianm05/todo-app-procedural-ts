@@ -19,7 +19,7 @@ var setTodoInProgress = function (target) {
     target.classList.toggle('progress');
     target.appendChild(document.createTextNode('In progress'));
     var newTodoStatusImage = document.createElement('img');
-    newTodoStatusImage.src = '/icons/icon-clock.svg';
+    newTodoStatusImage.src = './icons/icon-clock.svg';
     newTodoStatusImage.alt = 'Image of a clock.';
     target.appendChild(newTodoStatusImage);
 };
@@ -27,7 +27,7 @@ var setTodoFinished = function (target) {
     target.classList.toggle('finished');
     target.appendChild(document.createTextNode('Finished'));
     var newTodoStatusImage = document.createElement('img');
-    newTodoStatusImage.src = '/icons/icon-checkmark.svg';
+    newTodoStatusImage.src = './icons/icon-checkmark.svg';
     newTodoStatusImage.alt = 'Image of a checkmark.';
     target.appendChild(newTodoStatusImage);
 };
@@ -55,7 +55,7 @@ var createTodoItem = function (id, todoText, status) {
         newTodoButton1.setAttribute('aria-label', 'Press to mark to do as finished.');
         newTodoButton1.dataset.buttonRole = 'finish';
         var newTodoButton1Image = document.createElement('img');
-        newTodoButton1Image.src = '/icons/icon-checkmark.svg';
+        newTodoButton1Image.src = './icons/icon-checkmark.svg';
         newTodoButton1Image.alt = 'Image of a checkmark.';
         newTodoButton1.appendChild(newTodoButton1Image);
     }
@@ -63,7 +63,7 @@ var createTodoItem = function (id, todoText, status) {
         newTodoButton1.setAttribute('aria-label', 'Press to mark to do in progress.');
         newTodoButton1.dataset.buttonRole = 'progress';
         var newTodoButton1Image = document.createElement('img');
-        newTodoButton1Image.src = '/icons/icon-clock.svg';
+        newTodoButton1Image.src = './icons/icon-clock.svg';
         newTodoButton1Image.alt = 'Image of a clock.';
         newTodoButton1.appendChild(newTodoButton1Image);
     }
@@ -71,7 +71,7 @@ var createTodoItem = function (id, todoText, status) {
     newTodoButtonDelete.setAttribute('aria-label', 'Press to delete to do.');
     newTodoButtonDelete.dataset.buttonRole = 'delete';
     var newTodoImageDelete = document.createElement('img');
-    newTodoImageDelete.src = '/icons/icon-delete.svg';
+    newTodoImageDelete.src = './icons/icon-delete.svg';
     newTodoImageDelete.alt = 'Image of a trash bin.';
     newTodoButtonDelete.appendChild(newTodoImageDelete);
     newTodoActions.appendChild(newTodoButton1);
@@ -122,10 +122,10 @@ var setTodo = function (event) {
                 todoElementStatus.classList.toggle('finished');
                 todoElementStatus.innerText = 'Finished';
                 var todoElementStatusImage = document.createElement('img');
-                todoElementStatusImage.src = '/icons/icon-checkmark.svg';
+                todoElementStatusImage.src = './icons/icon-checkmark.svg';
                 todoElementStatusImage.alt = 'Image of a checkmark';
                 todoElementStatus.appendChild(todoElementStatusImage);
-                target.firstElementChild.src = '/icons/icon-clock.svg';
+                target.firstElementChild.src = './icons/icon-clock.svg';
                 target.firstElementChild.alt = 'Image of a clock.';
                 target.dataset.buttonRole = 'progress';
                 target.setAttribute('aria-label', 'Press to mark a to do in progress.');
@@ -142,10 +142,10 @@ var setTodo = function (event) {
                 todoElementStatus.classList.toggle('progress');
                 todoElementStatus.innerText = 'In progress';
                 var todoElementStatusImage = document.createElement('img');
-                todoElementStatusImage.src = '/icons/icon-clock.svg';
+                todoElementStatusImage.src = './icons/icon-clock.svg';
                 todoElementStatusImage.alt = 'Image of a clock';
                 todoElementStatus.appendChild(todoElementStatusImage);
-                target.firstElementChild.src = '/icons/icon-checkmark.svg';
+                target.firstElementChild.src = './icons/icon-checkmark.svg';
                 target.firstElementChild.alt = 'Image of a checkmark.';
                 target.dataset.buttonRole = 'finish';
                 target.setAttribute('aria-label', 'Press to mark a to do as finished.');
