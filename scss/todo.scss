@@ -1,0 +1,184 @@
+@import './_config.scss';
+
+h1 {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.5em;
+}
+
+.todo-section {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.todo-container {
+  display: block;
+  width: 95%;
+  max-width: $lg;
+  margin: 48px auto;
+}
+
+.todo-add__form {
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  background-color: $color1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &-fieldset {
+    display: block;
+    border: none;
+    width: 100%;
+  }
+
+  &-input {
+    display: inline-block;
+    width: 95%;
+    padding: 8px 4px;
+    border-radius: 10px;
+    border: 1px solid $color1;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    & img {
+      pointer-events: none;
+      width: 32px;
+      height: 32px;
+    }
+
+    @media (min-width: $md) {
+      & img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (min-width: $xxl) {
+      & img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.todo-list {
+  display: block;
+  width: 100%;
+  border: 2px solid $color1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  & li:nth-of-type(1) {
+    border-top: none;
+  }
+
+  & li:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    border-top: 1px solid $color1;
+    border-bottom: 1px solid $color1;
+
+    &-status {
+      display: flex;
+      align-items: center;
+      font-size: clamp(0.8rem, 3vw, 1.5rem);
+      border-bottom: 2px solid $color3;
+      padding: 0.3em 0;
+      font-weight: 500;
+
+      & img {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px;
+      }
+
+      @media (min-width: $md) {
+        & img {
+          width: 32px;
+          height: 32px;
+          margin: 0 12px;
+        }
+      }
+
+      @media (min-width: $xxl) {
+        & img {
+          width: 40px;
+          height: 40px;
+          margin: 0 16px;
+        }
+      }
+    }
+
+    .progress {
+      color: $color1;
+    }
+
+    .finished {
+      color: $color4;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: clamp(1.3rem, 3vw, 2.1rem);
+      line-height: 1.5em;
+      padding: 0.5em 0;
+      font-weight: 500;
+    }
+
+    &-actions {
+      display: flex;
+      margin-left: 16px;
+
+      & button {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        width: 32px;
+        height: 32px;
+        margin: 0 4px;
+
+        & img {
+          pointer-events: none;
+          width: 100%;
+          height: 100%;
+        }
+
+        @media (min-width: $md) {
+          width: 40px;
+          height: 40px;
+        }
+
+        @media (min-width: $xxl) {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}

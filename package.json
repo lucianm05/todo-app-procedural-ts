@@ -1,0 +1,22 @@
+{
+  "name": "todo-app-procedural-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianm05/todo-app-procedural-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianm05/todo-app-procedural-ts/issues"
+  },
+  "homepage": "https://github.com/lucianm05/todo-app-procedural-ts#readme",
+  "dependencies": {
+    "@types/node": "^16.4.13"
+  }
+}

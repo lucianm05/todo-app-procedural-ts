@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="/styles/globals.css" />
+    <link rel="stylesheet" href="/styles/todo.css" />
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>To do list</h1>
+      <section class="todo-section">
+        <div class="todo-container">
+          <form action="#" method="#" class="todo-add__form" id="addTodoForm">
+            <fieldset class="todo-add__form-fieldset">
+              <legend class="sr-only">Add a new to do:</legend>
+              <label class="todo-add__form-label">
+                <span class="sr-only">Add a new to do:</span>
+                <input class="todo-add__form-input" type="text" placeholder="Add a new to do..." name="addTodoInput" id="addTodoInput" required />
+              </label>
+            </fieldset>
+            <button aria-label="Press to add a new to do to the list." class="todo-add__form-button" id="addTodoButton">
+              <img src="/icons/icon-add.svg" alt="A plus sign." />
+            </button>
+          </form>
+          <ul class="todo-list" id="todoList">
+            <li class="todo-list__item">
+              <span class="todo-list__item-status progress">In progress <img src="/icons/icon-clock.svg" alt="Image of a clock." /></span>
+              <div class="todo-list__item-content">
+                <span>Buy bread</span>
+                <div class="todo-list__item-actions">
+                  <button aria-label="Press to mark to do as finished.">
+                    <img src="/icons/icon-checkmark.svg" alt="Image of a checkmark." />
+                  </button>
+                  <button aria-label="Press to delete to do.">
+                    <img src="/icons/icon-delete.svg" alt="Image of a trash bin." />
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
