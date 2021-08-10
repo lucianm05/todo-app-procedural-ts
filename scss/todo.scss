@@ -76,6 +76,10 @@ h1 {
       }
     }
   }
+
+  @media (min-width: $md) {
+    padding: 16px 12px;
+  }
 }
 
 .todo-list {
@@ -100,6 +104,8 @@ h1 {
     padding: 8px;
     border-top: 1px solid $color1;
     border-bottom: 1px solid $color1;
+    font-size: clamp(1.3rem, 3vw, 2.1rem);
+    line-height: 1.5em;
 
     &-status {
       display: flex;
